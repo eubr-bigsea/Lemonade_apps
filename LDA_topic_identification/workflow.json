@@ -1,0 +1,381 @@
+{
+   "updated": "2016-12-12T20:13:07+00:00", 
+   "tasks": [
+      {
+         "z_index": 11, 
+         "top": 326, 
+         "forms": {
+            "color": {
+               "category": "Appearance", 
+               "value": "#EBCCFF"
+            }, 
+            "features": {
+               "category": "Execution", 
+               "value": [
+                  "features"
+               ]
+            }
+         }, 
+         "version": 13, 
+         "operation": {
+            "slug": "clustering-model", 
+            "id": 10, 
+            "name": "Clustering model"
+         }, 
+         "id": "01b13b01-f9af-4d65-a43d-8915e01c06f7", 
+         "left": 199
+      }, 
+      {
+         "z_index": 14, 
+         "top": 39, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": "Divide texto em palavras"
+            }, 
+            "alias": {
+               "category": "Execution", 
+               "value": "words"
+            }, 
+            "attributes": {
+               "category": "Execution", 
+               "value": [
+                  "title_transformed"
+               ]
+            }
+         }, 
+         "version": 24, 
+         "operation": {
+            "slug": "tokenizer", 
+            "id": 49, 
+            "name": "Tokenizer"
+         }, 
+         "id": "4bc4c16b-4061-49f8-9584-6e1a1c2ae8f3", 
+         "left": 604
+      }, 
+      {
+         "z_index": 12, 
+         "top": 95, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": "Corpus\n"
+            }, 
+            "data_source": {
+               "category": "Execution", 
+               "value": "88"
+            }, 
+            "separator": {
+               "category": "Execution", 
+               "value": "{tab}"
+            }, 
+            "infer_schema": {
+               "category": "Execution", 
+               "value": "FROM_LIMONERO"
+            }
+         }, 
+         "version": 16, 
+         "operation": {
+            "slug": "data-reader", 
+            "id": 18, 
+            "name": "Data reader"
+         }, 
+         "id": "5033e798-525e-4e17-9bab-00f8da1f037f", 
+         "left": 79
+      }, 
+      {
+         "z_index": 13, 
+         "top": 450, 
+         "forms": {
+            "color": {
+               "category": "Appearance", 
+               "value": "#CCE0FF"
+            }, 
+            "terms_per_topic": {
+               "category": "Execution", 
+               "value": "10"
+            }
+         }, 
+         "version": 18, 
+         "operation": {
+            "slug": "topic-report", 
+            "id": 2, 
+            "name": "Topic report"
+         }, 
+         "id": "521e4586-cada-4d8e-9ef1-c5066864417f", 
+         "left": 145
+      }, 
+      {
+         "z_index": 12, 
+         "top": 169, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": "Lista de stop words em portugues"
+            }, 
+            "data_source": {
+               "category": "Execution", 
+               "value": "77"
+            }
+         }, 
+         "version": 7, 
+         "operation": {
+            "slug": "data-reader", 
+            "id": 18, 
+            "name": "Data reader"
+         }, 
+         "id": "65e7bec7-caf3-462b-a0b7-28684d09b90a", 
+         "left": 601
+      }, 
+      {
+         "z_index": 11, 
+         "top": 45, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": "Remove acentos e pontua\u00e7\u00e3o"
+            }, 
+            "alias": {
+               "category": "Execution", 
+               "value": "title_transformed"
+            }, 
+            "expression": {
+               "category": "Execution", 
+               "value": "{\"expression\":\"strip_punctuation(strip_accents('title'))\",\"tree\":{\"type\":\"CallExpression\",\"arguments\":[{\"type\":\"CallExpression\",\"arguments\":[{\"type\":\"Literal\",\"value\":\"title\",\"raw\":\"'title'\"}],\"callee\":{\"type\":\"Identifier\",\"name\":\"strip_accents\"}}],\"callee\":{\"type\":\"Identifier\",\"name\":\"strip_punctuation\"}}}"
+            }
+         }, 
+         "version": 21, 
+         "operation": {
+            "slug": "transformation", 
+            "id": 7, 
+            "name": "Transformation"
+         }, 
+         "id": "893a4f3b-8d07-4183-a1f3-598395ce4c00", 
+         "left": 342
+      }, 
+      {
+         "z_index": 15, 
+         "top": 206, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": "Remove stop words"
+            }, 
+            "alias": {
+               "category": "Execution", 
+               "value": "words2"
+            }, 
+            "stop_word_list": {
+               "category": "Execution", 
+               "value": "sao, por, que"
+            }, 
+            "attributes": {
+               "category": "Execution", 
+               "value": [
+                  "words"
+               ]
+            }
+         }, 
+         "version": 14, 
+         "operation": {
+            "slug": "remove-stop-words", 
+            "id": 50, 
+            "name": "Remove stop words"
+         }, 
+         "id": "9389e1d3-bc50-4a08-ae31-a63adf6c785d", 
+         "left": 351
+      }, 
+      {
+         "z_index": 11, 
+         "top": 213, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": "Transforma as palavras em vetores"
+            }, 
+            "vocab_size": {
+               "category": "Execution", 
+               "value": "10000"
+            }, 
+            "log_level": {
+               "category": "Logging", 
+               "value": "DEBUG"
+            }, 
+            "color": {
+               "category": "Appearance", 
+               "value": "#D1CCFF"
+            }, 
+            "alias": {
+               "category": "Execution", 
+               "value": "features"
+            }, 
+            "attributes": {
+               "category": "Execution", 
+               "value": [
+                  "words2"
+               ]
+            }
+         }, 
+         "version": 19, 
+         "operation": {
+            "slug": "word-to-vector", 
+            "id": 52, 
+            "name": "Convert words to vector"
+         }, 
+         "id": "ac3d6508-5683-47eb-94db-f6b7a4c296cb", 
+         "left": 98
+      }, 
+      {
+         "z_index": 11, 
+         "top": 3, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": "Identifica\u00e7\u00e3o de t\u00f3picos em t\u00edtulos de not\u00edcias"
+            }
+         }, 
+         "version": 4, 
+         "operation": {
+            "slug": "comment", 
+            "id": 25, 
+            "name": "Comment"
+         }, 
+         "id": "b73734a0-50cd-4f47-b341-c569da82177c", 
+         "left": 63
+      }, 
+      {
+         "z_index": 12, 
+         "top": 256, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": "Configura\u00e7\u00e3o do algoritmo LDA"
+            }, 
+            "number_of_topics": {
+               "category": "Execution", 
+               "value": "10"
+            }, 
+            "optimizer": {
+               "category": "Execution", 
+               "value": "online"
+            }, 
+            "color": {
+               "category": "Appearance", 
+               "value": "#FFEBCC"
+            }, 
+            "max_iteractions": {
+               "category": "Execution", 
+               "value": "20"
+            }
+         }, 
+         "version": 21, 
+         "operation": {
+            "slug": "lda-clustering", 
+            "id": 48, 
+            "name": "LDA Clustering"
+         }, 
+         "id": "dd56da78-6f69-48b2-b985-162062c4560b", 
+         "left": 603
+      }
+   ], 
+   "description": null, 
+   "created": "2016-12-12T20:13:07+00:00", 
+   "enabled": true, 
+   "flows": [
+      {
+         "source_port_name": "algorithm", 
+         "target_port_name": "algorithm", 
+         "target_id": "01b13b01-f9af-4d65-a43d-8915e01c06f7", 
+         "source_id": "dd56da78-6f69-48b2-b985-162062c4560b", 
+         "target_port": 22, 
+         "source_port": 107
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "9389e1d3-bc50-4a08-ae31-a63adf6c785d", 
+         "source_id": "4bc4c16b-4061-49f8-9584-6e1a1c2ae8f3", 
+         "target_port": 110, 
+         "source_port": 109
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "ac3d6508-5683-47eb-94db-f6b7a4c296cb", 
+         "source_id": "9389e1d3-bc50-4a08-ae31-a63adf6c785d", 
+         "target_port": 115, 
+         "source_port": 111
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "train input data", 
+         "target_id": "01b13b01-f9af-4d65-a43d-8915e01c06f7", 
+         "source_id": "ac3d6508-5683-47eb-94db-f6b7a4c296cb", 
+         "target_port": 23, 
+         "source_port": 116
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "893a4f3b-8d07-4183-a1f3-598395ce4c00", 
+         "source_id": "5033e798-525e-4e17-9bab-00f8da1f037f", 
+         "target_port": 29, 
+         "source_port": 35
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "4bc4c16b-4061-49f8-9584-6e1a1c2ae8f3", 
+         "source_id": "893a4f3b-8d07-4183-a1f3-598395ce4c00", 
+         "target_port": 108, 
+         "source_port": 30
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "stop words", 
+         "target_id": "9389e1d3-bc50-4a08-ae31-a63adf6c785d", 
+         "source_id": "65e7bec7-caf3-462b-a0b7-28684d09b90a", 
+         "target_port": 114, 
+         "source_port": 35
+      }, 
+      {
+         "source_port_name": "vocabulary", 
+         "target_port_name": "vocabulary", 
+         "target_id": "521e4586-cada-4d8e-9ef1-c5066864417f", 
+         "source_id": "ac3d6508-5683-47eb-94db-f6b7a4c296cb", 
+         "target_port": 120, 
+         "source_port": 117
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "521e4586-cada-4d8e-9ef1-c5066864417f", 
+         "source_id": "01b13b01-f9af-4d65-a43d-8915e01c06f7", 
+         "target_port": 16, 
+         "source_port": 25
+      }, 
+      {
+         "source_port_name": "model", 
+         "target_port_name": "model", 
+         "target_id": "521e4586-cada-4d8e-9ef1-c5066864417f", 
+         "source_id": "01b13b01-f9af-4d65-a43d-8915e01c06f7", 
+         "target_port": 121, 
+         "source_port": 24
+      }
+   ], 
+   "platform": {
+      "slug": "spark", 
+      "description": "Apache Spark 2.0 execution platform", 
+      "id": 1, 
+      "icon": "/static/spark.png", 
+      "name": "Spark"
+   }, 
+   "version": 1, 
+   "user": {
+      "login": "admin", 
+      "id": 0, 
+      "name": "admin"
+   }, 
+   "id": 13, 
+   "name": "Clustering example"
+}
