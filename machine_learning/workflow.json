@@ -1,0 +1,730 @@
+{
+   "updated": "2016-12-07T20:49:56+00:00", 
+   "tasks": [
+      {
+         "z_index": 21, 
+         "top": 464, 
+         "forms": {
+            "color": {
+               "category": "Appearance", 
+               "value": "#D1CCFF"
+            }, 
+            "folds": {
+               "category": "Execution", 
+               "value": "10"
+            }
+         }, 
+         "version": 9, 
+         "operation": {
+            "slug": "cross-validation", 
+            "id": 43, 
+            "name": "Cross validation"
+         }, 
+         "id": "0ce896d0-41b3-4ab7-8711-b9eb6e08e095", 
+         "left": 14
+      }, 
+      {
+         "z_index": 12, 
+         "top": 776, 
+         "forms": {
+            "log_level": {
+               "category": "Logging", 
+               "value": "DEBUG"
+            }
+         }, 
+         "version": 3, 
+         "operation": {
+            "slug": "classification-report", 
+            "id": 54, 
+            "name": "Classification Report"
+         }, 
+         "id": "24605422-630e-423c-ad19-e175f75467a9", 
+         "left": 14
+      }, 
+      {
+         "z_index": 23, 
+         "top": 664, 
+         "forms": {
+            "color": {
+               "category": "Appearance", 
+               "value": "#FFBA52"
+            }, 
+            "folds": {
+               "category": "Execution", 
+               "value": "10"
+            }
+         }, 
+         "version": 8, 
+         "operation": {
+            "slug": "cross-validation", 
+            "id": 43, 
+            "name": "Cross validation"
+         }, 
+         "id": "29dd5a75-7f54-442a-93ff-a03bb3d8f54a", 
+         "left": 218
+      }, 
+      {
+         "z_index": 24, 
+         "top": 664, 
+         "forms": {
+            "color": {
+               "category": "Appearance", 
+               "value": "#CCE0FF"
+            }, 
+            "folds": {
+               "category": "Execution", 
+               "value": "10"
+            }
+         }, 
+         "version": 15, 
+         "operation": {
+            "slug": "cross-validation", 
+            "id": 43, 
+            "name": "Cross validation"
+         }, 
+         "id": "3109d320-a18f-48fd-bb35-2e009d5c6b94", 
+         "left": 770
+      }, 
+      {
+         "z_index": 12, 
+         "top": 306, 
+         "forms": {
+            "color": {
+               "category": "Appearance", 
+               "value": "#FFCCE0"
+            }, 
+            "metric": {
+               "category": "Execution", 
+               "value": "accuracy"
+            }, 
+            "prediction-attribute": {
+               "category": "Execution", 
+               "value": [
+                  "prediction"
+               ]
+            }, 
+            "label-attribute": {
+               "category": "Execution", 
+               "value": [
+                  "survived"
+               ]
+            }, 
+            "prediction_attribute": {
+               "category": "Execution", 
+               "value": [
+                  "prediction"
+               ]
+            }, 
+            "label_attribute": {
+               "category": "Execution", 
+               "value": [
+                  "survived"
+               ]
+            }
+         }, 
+         "version": 13, 
+         "operation": {
+            "slug": "evaluate-model", 
+            "id": 19, 
+            "name": "Evaluate model"
+         }, 
+         "id": "6c97773f-9eee-4dd1-a88b-2a667cb3c5a4", 
+         "left": 540
+      }, 
+      {
+         "z_index": 15, 
+         "top": 546, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": ""
+            }, 
+            "color": {
+               "category": "Appearance", 
+               "value": "#CCFFD1"
+            }, 
+            "features": {
+               "category": "Param grid", 
+               "value": [
+                  "features"
+               ]
+            }, 
+            "label": {
+               "category": "Param grid", 
+               "value": [
+                  "survived"
+               ]
+            }
+         }, 
+         "version": 12, 
+         "operation": {
+            "slug": "decision-tree-classifier", 
+            "id": 46, 
+            "name": "Decision tree classifier"
+         }, 
+         "id": "773143b7-5c31-4fee-a620-8abde268a3d2", 
+         "left": 370
+      }, 
+      {
+         "z_index": 19, 
+         "top": 325, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": ""
+            }, 
+            "color": {
+               "category": "Appearance", 
+               "value": "#D1CCFF"
+            }, 
+            "features": {
+               "category": "Param grid", 
+               "value": [
+                  "features"
+               ]
+            }, 
+            "label": {
+               "category": "Param grid", 
+               "value": [
+                  "survived"
+               ]
+            }
+         }, 
+         "version": 13, 
+         "operation": {
+            "slug": "gbt-classifier", 
+            "id": 45, 
+            "name": "GBT Classifier"
+         }, 
+         "id": "a123cd92-9356-4197-8476-297e05c9b340", 
+         "left": 11
+      }, 
+      {
+         "z_index": 12, 
+         "top": 226, 
+         "forms": {
+            "attributes": {
+               "category": "Execution", 
+               "value": [
+                  "id", 
+                  "survived", 
+                  "sex", 
+                  "age", 
+                  "fare", 
+                  "class", 
+                  "title", 
+                  "embarked"
+               ]
+            }
+         }, 
+         "version": 3, 
+         "operation": {
+            "slug": "projection", 
+            "id": 6, 
+            "name": "Projection/Select columns"
+         }, 
+         "id": "a78f9f80-bcbd-11e6-a154-305a3a9e86de", 
+         "left": 83
+      }, 
+      {
+         "z_index": 11, 
+         "top": 19, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": "Read Titanic data"
+            }, 
+            "data_source": {
+               "category": "Execution", 
+               "value": "4"
+            }, 
+            "color": {
+               "category": "Appearance", 
+               "value": "transparent"
+            }, 
+            "infer_schema": {
+               "category": "Execution", 
+               "value": "FROM_LIMONERO"
+            }, 
+            "null_values": {
+               "category": "Execution", 
+               "value": "null, NA"
+            }, 
+            "header": {
+               "category": "Execution", 
+               "value": "1"
+            }
+         }, 
+         "version": 5, 
+         "operation": {
+            "slug": "data-reader", 
+            "id": 18, 
+            "name": "Data reader"
+         }, 
+         "id": "a78f9f81-bcbd-11e6-a154-305a3a9e86de", 
+         "left": 83
+      }, 
+      {
+         "z_index": 11, 
+         "top": 346, 
+         "forms": {
+            "alias": {
+               "category": "Execution", 
+               "value": "features"
+            }, 
+            "log_level": {
+               "category": "Execution logging", 
+               "value": "DEBUG"
+            }, 
+            "attributes": {
+               "category": "Execution", 
+               "value": [
+                  "embarked_indexed", 
+                  "sex_indexed", 
+                  "class_indexed", 
+                  "title_indexed", 
+                  "age", 
+                  "fare"
+               ]
+            }
+         }, 
+         "version": 11, 
+         "operation": {
+            "slug": "feature-assembler", 
+            "id": 41, 
+            "name": "Feature assembler"
+         }, 
+         "id": "a78f9f82-bcbd-11e6-a154-305a3a9e86de", 
+         "left": 310
+      }, 
+      {
+         "z_index": 11, 
+         "top": 569, 
+         "forms": {
+            "color": {
+               "category": "Appearance", 
+               "value": "#CCE0FF"
+            }, 
+            "features": {
+               "category": "Param grid", 
+               "value": [
+                  "features"
+               ]
+            }, 
+            "impurity": {
+               "category": "Param grid", 
+               "value": []
+            }, 
+            "label": {
+               "category": "Param grid", 
+               "value": [
+                  "survived"
+               ]
+            }
+         }, 
+         "version": 10, 
+         "operation": {
+            "slug": "random-forest-classifier", 
+            "id": 44, 
+            "name": "Random forest classifier"
+         }, 
+         "id": "a78f9f84-bcbd-11e6-a154-305a3a9e86de", 
+         "left": 665
+      }, 
+      {
+         "z_index": 12, 
+         "top": 138, 
+         "forms": {
+            "indexer_type": {
+               "category": "Execution", 
+               "value": "string"
+            }, 
+            "attributes": {
+               "category": "Execution", 
+               "value": [
+                  "class", 
+                  "title", 
+                  "embarked", 
+                  "sex"
+               ]
+            }
+         }, 
+         "version": 5, 
+         "operation": {
+            "slug": "feature-indexer", 
+            "id": 40, 
+            "name": "Feature indexer"
+         }, 
+         "id": "a78f9f85-bcbd-11e6-a154-305a3a9e86de", 
+         "left": 311
+      }, 
+      {
+         "z_index": 12, 
+         "top": 151, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": "Titanic survivor classification model"
+            }, 
+            "color": {
+               "category": "Appearance", 
+               "value": "transparent"
+            }
+         }, 
+         "version": 5, 
+         "operation": {
+            "slug": "comment", 
+            "id": 25, 
+            "name": "Comment"
+         }, 
+         "id": "a78f9f87-bcbd-11e6-a154-305a3a9e86de", 
+         "left": 526
+      }, 
+      {
+         "z_index": 11, 
+         "top": 235, 
+         "forms": {
+            "attributes": {
+               "category": "Execution", 
+               "value": [
+                  "fare"
+               ]
+            }, 
+            "cleaning_mode": {
+               "category": "Execution", 
+               "value": "VALUE"
+            }, 
+            "value": {
+               "category": "Execution", 
+               "value": "0"
+            }
+         }, 
+         "version": 5, 
+         "operation": {
+            "slug": "clean-missing", 
+            "id": 21, 
+            "name": "Clean missing"
+         }, 
+         "id": "a78f9f88-bcbd-11e6-a154-305a3a9e86de", 
+         "left": 310
+      }, 
+      {
+         "z_index": 11, 
+         "top": 38, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": ""
+            }, 
+            "value": {
+               "category": "Execution", 
+               "value": ""
+            }, 
+            "max_missing_ratio": {
+               "category": "Execution", 
+               "value": "1"
+            }, 
+            "cleaning_mode": {
+               "category": "Execution", 
+               "value": "MEAN"
+            }, 
+            "attributes": {
+               "category": "Execution", 
+               "value": [
+                  "age"
+               ]
+            }, 
+            "min_missing_ratio": {
+               "category": "Execution", 
+               "value": "0"
+            }
+         }, 
+         "version": 4, 
+         "operation": {
+            "slug": "clean-missing", 
+            "id": 21, 
+            "name": "Clean missing"
+         }, 
+         "id": "a78f9f89-bcbd-11e6-a154-305a3a9e86de", 
+         "left": 311
+      }, 
+      {
+         "z_index": 15, 
+         "top": 125, 
+         "forms": {
+            "comment": {
+               "category": "Appearance", 
+               "value": "Extract the title (Mr. Ms., etc) from name"
+            }, 
+            "alias": {
+               "category": "Execution", 
+               "value": "title"
+            }, 
+            "expression": {
+               "category": "Execution", 
+               "value": "{\"expression\":\"regexp_extract('name','.*, (.*?). .*' , 1)\",\"tree\":{\"type\":\"CallExpression\",\"arguments\":[{\"type\":\"Literal\",\"value\":\"name\",\"raw\":\"'name'\"},{\"type\":\"Literal\",\"value\":\".*, (.*?). .*\",\"raw\":\"'.*, (.*?). .*'\"},{\"type\":\"Literal\",\"value\":1,\"raw\":\"1\"}],\"callee\":{\"type\":\"Identifier\",\"name\":\"regexp_extract\"}}}"
+            }
+         }, 
+         "version": 3, 
+         "operation": {
+            "slug": "transformation", 
+            "id": 7, 
+            "name": "Transformation"
+         }, 
+         "id": "a78f9f8c-bcbd-11e6-a154-305a3a9e86de", 
+         "left": 83
+      }, 
+      {
+         "z_index": 20, 
+         "top": 544, 
+         "forms": {
+            "color": {
+               "category": "Appearance", 
+               "value": "#FFBA52"
+            }, 
+            "label": {
+               "category": "Param grid", 
+               "value": [
+                  "survived"
+               ]
+            }, 
+            "features": {
+               "category": "Param grid", 
+               "value": [
+                  "features"
+               ]
+            }, 
+            "smoothing": {
+               "category": "Param grid", 
+               "value": "0.1, 0.2, 0.5"
+            }
+         }, 
+         "version": 28, 
+         "operation": {
+            "slug": "naive-bayes-classifier", 
+            "id": 4, 
+            "name": "Naive Bayes classifier"
+         }, 
+         "id": "b5e83305-da49-4079-acd1-33195a4a01ae", 
+         "left": 112
+      }, 
+      {
+         "z_index": 22, 
+         "top": 664, 
+         "forms": {
+            "color": {
+               "category": "Appearance", 
+               "value": "#CCFFD1"
+            }, 
+            "folds": {
+               "category": "Execution", 
+               "value": "10"
+            }
+         }, 
+         "version": 13, 
+         "operation": {
+            "slug": "cross-validation", 
+            "id": 43, 
+            "name": "Cross validation"
+         }, 
+         "id": "f77e186b-77a6-49bf-80a0-428556565fae", 
+         "left": 484
+      }
+   ], 
+   "description": null, 
+   "created": "2016-12-07T20:49:56+00:00", 
+   "enabled": true, 
+   "flows": [
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "a78f9f8c-bcbd-11e6-a154-305a3a9e86de", 
+         "source_id": "a78f9f81-bcbd-11e6-a154-305a3a9e86de", 
+         "target_port": 29, 
+         "source_port": 35
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "a78f9f80-bcbd-11e6-a154-305a3a9e86de", 
+         "source_id": "a78f9f8c-bcbd-11e6-a154-305a3a9e86de", 
+         "target_port": 3, 
+         "source_port": 30
+      }, 
+      {
+         "source_port_name": "output projected data", 
+         "target_port_name": "input data", 
+         "target_id": "a78f9f89-bcbd-11e6-a154-305a3a9e86de", 
+         "source_id": "a78f9f80-bcbd-11e6-a154-305a3a9e86de", 
+         "target_port": 44, 
+         "source_port": 4
+      }, 
+      {
+         "source_port_name": "output result", 
+         "target_port_name": "input data", 
+         "target_id": "a78f9f85-bcbd-11e6-a154-305a3a9e86de", 
+         "source_id": "a78f9f89-bcbd-11e6-a154-305a3a9e86de", 
+         "target_port": 85, 
+         "source_port": 43
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "a78f9f88-bcbd-11e6-a154-305a3a9e86de", 
+         "source_id": "a78f9f85-bcbd-11e6-a154-305a3a9e86de", 
+         "target_port": 44, 
+         "source_port": 86
+      }, 
+      {
+         "source_port_name": "output result", 
+         "target_port_name": "input data", 
+         "target_id": "a78f9f82-bcbd-11e6-a154-305a3a9e86de", 
+         "source_id": "a78f9f88-bcbd-11e6-a154-305a3a9e86de", 
+         "target_port": 87, 
+         "source_port": 43
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "0ce896d0-41b3-4ab7-8711-b9eb6e08e095", 
+         "source_id": "a78f9f82-bcbd-11e6-a154-305a3a9e86de", 
+         "target_port": 95, 
+         "source_port": 88
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "29dd5a75-7f54-442a-93ff-a03bb3d8f54a", 
+         "source_id": "a78f9f82-bcbd-11e6-a154-305a3a9e86de", 
+         "target_port": 95, 
+         "source_port": 88
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "f77e186b-77a6-49bf-80a0-428556565fae", 
+         "source_id": "a78f9f82-bcbd-11e6-a154-305a3a9e86de", 
+         "target_port": 95, 
+         "source_port": 88
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "3109d320-a18f-48fd-bb35-2e009d5c6b94", 
+         "source_id": "a78f9f82-bcbd-11e6-a154-305a3a9e86de", 
+         "target_port": 95, 
+         "source_port": 88
+      }, 
+      {
+         "source_port_name": "evaluator", 
+         "target_port_name": "evaluator", 
+         "target_id": "29dd5a75-7f54-442a-93ff-a03bb3d8f54a", 
+         "source_id": "6c97773f-9eee-4dd1-a88b-2a667cb3c5a4", 
+         "target_port": 106, 
+         "source_port": 105
+      }, 
+      {
+         "source_port_name": "evaluator", 
+         "target_port_name": "evaluator", 
+         "target_id": "0ce896d0-41b3-4ab7-8711-b9eb6e08e095", 
+         "source_id": "6c97773f-9eee-4dd1-a88b-2a667cb3c5a4", 
+         "target_port": 106, 
+         "source_port": 105
+      }, 
+      {
+         "source_port_name": "evaluator", 
+         "target_port_name": "evaluator", 
+         "target_id": "f77e186b-77a6-49bf-80a0-428556565fae", 
+         "source_id": "6c97773f-9eee-4dd1-a88b-2a667cb3c5a4", 
+         "target_port": 106, 
+         "source_port": 105
+      }, 
+      {
+         "source_port_name": "evaluator", 
+         "target_port_name": "evaluator", 
+         "target_id": "3109d320-a18f-48fd-bb35-2e009d5c6b94", 
+         "source_id": "6c97773f-9eee-4dd1-a88b-2a667cb3c5a4", 
+         "target_port": 106, 
+         "source_port": 105
+      }, 
+      {
+         "source_port_name": "evaluation", 
+         "target_port_name": "evaluation", 
+         "target_id": "24605422-630e-423c-ad19-e175f75467a9", 
+         "source_id": "29dd5a75-7f54-442a-93ff-a03bb3d8f54a", 
+         "target_port": 119, 
+         "source_port": 98
+      }, 
+      {
+         "source_port_name": "evaluation", 
+         "target_port_name": "evaluation", 
+         "target_id": "24605422-630e-423c-ad19-e175f75467a9", 
+         "source_id": "f77e186b-77a6-49bf-80a0-428556565fae", 
+         "target_port": 119, 
+         "source_port": 98
+      }, 
+      {
+         "source_port_name": "evaluation", 
+         "target_port_name": "evaluation", 
+         "target_id": "24605422-630e-423c-ad19-e175f75467a9", 
+         "source_id": "3109d320-a18f-48fd-bb35-2e009d5c6b94", 
+         "target_port": 119, 
+         "source_port": 98
+      }, 
+      {
+         "source_port_name": "evaluation", 
+         "target_port_name": "evaluation", 
+         "target_id": "24605422-630e-423c-ad19-e175f75467a9", 
+         "source_id": "0ce896d0-41b3-4ab7-8711-b9eb6e08e095", 
+         "target_port": 119, 
+         "source_port": 98
+      }, 
+      {
+         "source_port_name": "algorithm", 
+         "target_port_name": "algorithm", 
+         "target_id": "3109d320-a18f-48fd-bb35-2e009d5c6b94", 
+         "source_id": "a78f9f84-bcbd-11e6-a154-305a3a9e86de", 
+         "target_port": 96, 
+         "source_port": 101
+      }, 
+      {
+         "source_port_name": "algorithm", 
+         "target_port_name": "algorithm", 
+         "target_id": "0ce896d0-41b3-4ab7-8711-b9eb6e08e095", 
+         "source_id": "a123cd92-9356-4197-8476-297e05c9b340", 
+         "target_port": 96, 
+         "source_port": 102
+      }, 
+      {
+         "source_port_name": "algorithm", 
+         "target_port_name": "algorithm", 
+         "target_id": "29dd5a75-7f54-442a-93ff-a03bb3d8f54a", 
+         "source_id": "b5e83305-da49-4079-acd1-33195a4a01ae", 
+         "target_port": 96, 
+         "source_port": 21
+      }, 
+      {
+         "source_port_name": "algorithm", 
+         "target_port_name": "algorithm", 
+         "target_id": "f77e186b-77a6-49bf-80a0-428556565fae", 
+         "source_id": "773143b7-5c31-4fee-a620-8abde268a3d2", 
+         "target_port": 96, 
+         "source_port": 103
+      }
+   ], 
+   "platform": {
+      "slug": "spark", 
+      "description": "Apache Spark 2.0 execution platform", 
+      "id": 1, 
+      "icon": "/static/spark.png", 
+      "name": "Spark"
+   }, 
+   "version": 1, 
+   "user": {
+      "login": "admin", 
+      "id": 0, 
+      "name": "admin"
+   }, 
+   "id": 12, 
+   "name": "Titanic survivers classification k-Fold"
+}
