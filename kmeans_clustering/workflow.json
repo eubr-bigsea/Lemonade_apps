@@ -1,0 +1,243 @@
+{
+   "updated": "2016-12-27T17:17:01+00:00", 
+   "tasks": [
+      {
+         "z_index": 12, 
+         "top": 137, 
+         "forms": {
+            "attributes": {
+               "category": "Execution", 
+               "value": [
+                  "gender", 
+                  "race", 
+                  "age", 
+                  "weight", 
+                  "readmitted", 
+                  "diag1", 
+                  "diag2", 
+                  "diag3"
+               ]
+            }
+         }, 
+         "version": 4, 
+         "operation": {
+            "slug": "feature-indexer", 
+            "id": 40, 
+            "name": "Feature indexer"
+         }, 
+         "id": "0ee7bbbe-c786-4529-9a67-0c1bd8830fc8", 
+         "left": 76
+      }, 
+      {
+         "z_index": 11, 
+         "top": 26, 
+         "forms": {
+            "max_iterations": {
+               "category": "Execution", 
+               "value": "10000"
+            }, 
+            "init_mode": {
+               "category": "Execution", 
+               "value": "k-means||"
+            }, 
+            "number_of_clusters": {
+               "category": "Execution", 
+               "value": "50"
+            }, 
+            "tolerance": {
+               "category": "Execution", 
+               "value": "0.0001"
+            }, 
+            "type": {
+               "category": "Execution", 
+               "value": "kmeans"
+            }
+         }, 
+         "version": 14, 
+         "operation": {
+            "slug": "k-means-clustering", 
+            "id": 29, 
+            "name": "K-Means Clustering"
+         }, 
+         "id": "114c207c-5371-4037-9525-9f470a9e15af", 
+         "left": 329
+      }, 
+      {
+         "z_index": 11, 
+         "top": 27, 
+         "forms": {
+            "header": {
+               "category": "Execution", 
+               "value": "1"
+            }, 
+            "data_source": {
+               "category": "Execution", 
+               "value": "91"
+            }, 
+            "separator": {
+               "category": "Execution", 
+               "value": ","
+            }, 
+            "infer_schema": {
+               "category": "Execution", 
+               "value": "FROM_VALUES"
+            }
+         }, 
+         "version": 4, 
+         "operation": {
+            "slug": "data-reader", 
+            "id": 18, 
+            "name": "Data reader"
+         }, 
+         "id": "1e5b2f54-cd43-480b-9735-587e0584b283", 
+         "left": 76
+      }, 
+      {
+         "z_index": 11, 
+         "top": 146, 
+         "forms": {
+            "log_level": {
+               "category": "Logging", 
+               "value": "DEBUG"
+            }, 
+            "features": {
+               "category": "Execution", 
+               "value": [
+                  "features"
+               ]
+            }
+         }, 
+         "version": 15, 
+         "operation": {
+            "slug": "clustering-model", 
+            "id": 10, 
+            "name": "Clustering model"
+         }, 
+         "id": "42380b12-1ddc-40c3-a2a6-c4fdd9e65194", 
+         "left": 335
+      }, 
+      {
+         "z_index": 11, 
+         "top": 262, 
+         "forms": {
+            "attributes": {
+               "category": "Execution", 
+               "value": [
+                  "patient_nbr", 
+                  "prediction"
+               ]
+            }, 
+            "log_level": {
+               "category": "Logging", 
+               "value": "DEBUG"
+            }
+         }, 
+         "version": 6, 
+         "operation": {
+            "slug": "projection", 
+            "id": 6, 
+            "name": "Projection/Select columns"
+         }, 
+         "id": "c69dbcc6-71af-4270-bdd3-8f80d14a0b8b", 
+         "left": 330
+      }, 
+      {
+         "z_index": 11, 
+         "top": 255, 
+         "forms": {
+            "attributes": {
+               "category": "Execution", 
+               "value": [
+                  "admission_type_id", 
+                  "discharge_disposition_id", 
+                  "admission_source_id", 
+                  "time_in_hospital", 
+                  "num_lab_procedures", 
+                  "num_procedures", 
+                  "num_medications", 
+                  "number_outpatient", 
+                  "number_emergency", 
+                  "number_inpatient", 
+                  "number_diagnoses", 
+                  "gender_indexed", 
+                  "race_indexed", 
+                  "age_indexed", 
+                  "weight_indexed", 
+                  "readmitted_indexed", 
+                  "diag1_indexed", 
+                  "diag2_indexed", 
+                  "diag3_indexed"
+               ]
+            }
+         }, 
+         "version": 12, 
+         "operation": {
+            "slug": "feature-assembler", 
+            "id": 41, 
+            "name": "Feature assembler"
+         }, 
+         "id": "dc773e75-f591-4f17-a3ba-6c23fb0324ab", 
+         "left": 78
+      }
+   ], 
+   "description": null, 
+   "created": "2016-12-14T17:53:19+00:00", 
+   "enabled": true, 
+   "flows": [
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "train input data", 
+         "target_id": "42380b12-1ddc-40c3-a2a6-c4fdd9e65194", 
+         "source_id": "dc773e75-f591-4f17-a3ba-6c23fb0324ab", 
+         "target_port": 23, 
+         "source_port": 88
+      }, 
+      {
+         "source_port_name": "algorithm", 
+         "target_port_name": "algorithm", 
+         "target_id": "42380b12-1ddc-40c3-a2a6-c4fdd9e65194", 
+         "source_id": "114c207c-5371-4037-9525-9f470a9e15af", 
+         "target_port": 22, 
+         "source_port": 57
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "c69dbcc6-71af-4270-bdd3-8f80d14a0b8b", 
+         "source_id": "42380b12-1ddc-40c3-a2a6-c4fdd9e65194", 
+         "target_port": 3, 
+         "source_port": 25
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "0ee7bbbe-c786-4529-9a67-0c1bd8830fc8", 
+         "source_id": "1e5b2f54-cd43-480b-9735-587e0584b283", 
+         "target_port": 85, 
+         "source_port": 35
+      }, 
+      {
+         "source_port_name": "output data", 
+         "target_port_name": "input data", 
+         "target_id": "dc773e75-f591-4f17-a3ba-6c23fb0324ab", 
+         "source_id": "0ee7bbbe-c786-4529-9a67-0c1bd8830fc8", 
+         "target_port": 87, 
+         "source_port": 86
+      }
+   ], 
+   "platform": {
+      "slug": "spark", 
+      "description": "Apache Spark 2.0 execution platform", 
+      "id": 1, 
+      "icon": "/static/spark.png", 
+      "name": "Spark"
+   }, 
+   "version": 2, 
+   "user": {
+      "login": "admin", 
+      "id": 0, 
+      "name": "admin"
+   }, 
+   "id": 15, 
+   "name": "Experimento K-Means - Varia\u00e7\u00e3o de N\u00facleos"
+}
